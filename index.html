@@ -1,0 +1,197 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelos de Cores</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-content">
+      <div class="logo">
+        <i class="fas fa-palette"></i>
+        <span>Teoria das Cores</span>
+      </div>
+      <div class="nav-links">
+        <a href="#modelo-aditivo">RGB</a>
+        <a href="#modelo-subtrativo">CMYK</a>
+        <a href="#aplicacoes">Aplicações</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Modelos de Cores</h1>
+      <p class="subtitle">Explorando os fundamentos da cor digital e impressa</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="modelo-aditivo" class="section-container">
+      <h2>Modelo Aditivo (RGB)</h2>
+      <div class="grid-container">
+        <div class="text-content">
+          <p>
+            O modelo aditivo RGB é fundamental para a exibição de cores em dispositivos eletrônicos. Este sistema baseia-se no princípio da adição de luz, onde diferentes intensidades de três cores primárias se combinam para criar todo o espectro visível:
+          </p>
+          <ul class="color-list">
+            <li class="rgb-red">Vermelho (Red) - Comprimento de onda de ~700nm</li>
+            <li class="rgb-green">Verde (Green) - Comprimento de onda de ~546nm</li>
+            <li class="rgb-blue">Azul (Blue) - Comprimento de onda de ~435nm</li>
+          </ul>
+          
+          <div class="info-box">
+            <h3>Como funciona?</h3>
+            <p>
+              Em dispositivos digitais, cada pixel é composto por três subpixels (R, G, B). A intensidade de cada subpixel varia de 0 a 255, criando mais de 16 milhões de cores possíveis (256³). Por exemplo:
+            </p>
+            <ul>
+              <li>Branco = R(255) G(255) B(255) - Todas as cores em intensidade máxima</li>
+              <li>Preto = R(0) G(0) B(0) - Ausência total de luz</li>
+              <li>Amarelo = R(255) G(255) B(0) - Combinação de vermelho e verde</li>
+            </ul>
+            <p>
+              Este sistema é chamado de aditivo porque a adição de diferentes intensidades de luz resulta em cores mais claras, com a combinação máxima produzindo luz branca.
+            </p>
+          </div>
+          
+          <div class="info-box">
+            <h3>Aplicações Práticas</h3>
+            <p>
+              O modelo RGB é utilizado em:
+            </p>
+            <ul>
+              <li>Monitores LCD, LED e OLED</li>
+              <li>Smartphones e tablets</li>
+              <li>Câmeras digitais e scanners</li>
+              <li>Projetores e televisores</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="interactive-demo">
+          <div class="rgb-mixer">
+            <div class="color-sliders">
+              <label>
+                R <input type="range" min="0" max="255" value="128" class="slider red">
+                <span class="value">128</span>
+              </label>
+              <label>
+                G <input type="range" min="0" max="255" value="128" class="slider green">
+                <span class="value">128</span>
+              </label>
+              <label>
+                B <input type="range" min="0" max="255" value="128" class="slider blue">
+                <span class="value">128</span>
+              </label>
+            </div>
+            <div class="color-preview"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="modelo-subtrativo" class="section-container">
+      <h2>Modelo Subtrativo (CMYK)</h2>
+      <div class="grid-container">
+        <div class="text-content">
+          <p>
+            O modelo subtrativo CMYK é a base da impressão moderna. Diferente do RGB, que adiciona luz, o CMYK trabalha subtraindo comprimentos de onda da luz branca refletida pelo papel:
+          </p>
+          <ul class="color-list">
+            <li class="cmyk-cyan">Ciano (Cyan) - Absorve vermelho</li>
+            <li class="cmyk-magenta">Magenta (Magenta) - Absorve verde</li>
+            <li class="cmyk-yellow">Amarelo (Yellow) - Absorve azul</li>
+            <li class="cmyk-black">Preto (Key/Black) - Absorve todos os comprimentos de onda</li>
+          </ul>
+          
+          <div class="info-box">
+            <h3>Por que usar CMYK?</h3>
+            <p>
+              Na impressão, as tintas funcionam como filtros de luz. Quando a luz branca atinge o papel:
+            </p>
+            <ul>
+              <li>Tinta ciano absorve a luz vermelha, refletindo verde e azul</li>
+              <li>Tinta magenta absorve a luz verde, refletindo vermelho e azul</li>
+              <li>Tinta amarela absorve a luz azul, refletindo vermelho e verde</li>
+              <li>Tinta preta (K) é usada para:
+                <ul>
+                  <li>Criar contraste mais profundo</li>
+                  <li>Economizar tintas coloridas</li>
+                  <li>Melhorar a definição de textos</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="info-box">
+            <h3>Processo de Impressão</h3>
+            <p>
+              A impressão CMYK é feita em camadas, onde cada cor é aplicada separadamente em um processo chamado meio-tom. Pequenos pontos de diferentes tamanhos e espaçamentos criam a ilusão de tonalidades contínuas.
+            </p>
+            <p>
+              As porcentagens de cada cor são expressas em valores de 0 a 100%. Por exemplo:
+            </p>
+            <ul>
+              <li>Vermelho puro: C(0%) M(100%) Y(100%) K(0%)</li>
+              <li>Verde puro: C(100%) M(0%) Y(100%) K(0%)</li>
+              <li>Azul puro: C(100%) M(100%) Y(0%) K(0%)</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="cmyk-demo">
+          <svg class="cmyk-circles" viewBox="0 0 300 300">
+            <!-- Círculos CMYK serão adicionados via JavaScript -->
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="aplicacoes" class="section-container">
+      <h2>Aplicações Práticas</h2>
+      <div class="cards-container">
+        <div class="card">
+          <i class="fas fa-tv"></i>
+          <h3>Displays</h3>
+          <p>Monitores, TVs, smartphones e tablets utilizam RGB para criar todas as cores que você vê na tela.</p>
+        </div>
+        
+        <div class="card">
+          <i class="fas fa-print"></i>
+          <h3>Impressão</h3>
+          <p>Impressoras profissionais usam CMYK para reproduzir cores em papel e outros materiais.</p>
+        </div>
+        
+        <div class="card">
+          <i class="fas fa-camera"></i>
+          <h3>Fotografia</h3>
+          <p>Câmeras digitais capturam em RGB, mas precisam converter para CMYK para impressão.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Teoria das Cores</h3>
+        <p>Explorando os fundamentos da cor digital e impressa</p>
+      </div>
+      <div class="footer-section">
+        <h3>Links Úteis</h3>
+        <a href="#modelo-aditivo">RGB</a>
+        <a href="#modelo-subtrativo">CMYK</a>
+        <a href="#aplicacoes">Aplicações</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Teoria das Cores - Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
